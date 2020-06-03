@@ -10,6 +10,9 @@
 #include "htif.h"
 #include <string.h>
 #include <limits.h>
+#include "gpio.h"
+#include "spi.h"
+#include "keys/keycore.h"
 
 #ifdef SM_ENABLED
 # include "sm.h"
@@ -146,6 +149,9 @@ void init_first_hart(uintptr_t hartid, uintptr_t dtb)
   query_uart(dtb);
   query_uart16550(dtb);
   query_htif(dtb);
+  query_spi(dtb);
+  query_gpio(dtb);
+  
   printm("bbl loader\r\n");
 
   hart_init();

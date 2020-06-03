@@ -104,7 +104,7 @@ SECTIONS
   /* ## manufacturer_keys : */
 
   /* 32 Bytes : manufacturer public key */
-  PROVIDE( sanctum_m_public_key = . );
+  PROVIDE( sanctum_m_public_key_old = . );
   . += 0x20;
 
   /* 32 Bytes : device public key */
@@ -112,7 +112,7 @@ SECTIONS
   . += 0x20;
 
   /* 64 Bytes : device secret key */
-  PROVIDE( sanctum_dev_secret_key = . );
+  PROVIDE( sanctum_dev_secret_key_old = . );
   . += 0x40;
 
   /* ## security_monitor_keys : */
@@ -126,7 +126,7 @@ SECTIONS
   . += 0x20;
 
   /* 64 Bytes : security monitor secret key */
-  PROVIDE( sanctum_sm_secret_key = . );
+  PROVIDE( sanctum_sm_secret_key_old = . );
   . += 0x40;
 
   /* 64 Bytes : security monitor's signature by device */

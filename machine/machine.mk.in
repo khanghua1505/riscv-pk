@@ -29,6 +29,8 @@ machine_c_srcs = \
   finisher.c \
   misaligned_ldst.c \
   flush_icache.c \
+  gpio.c \
+  spi.c
 
 machine_asm_srcs = \
   mentry.S \

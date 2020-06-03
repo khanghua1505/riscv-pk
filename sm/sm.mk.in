@@ -20,7 +20,13 @@ sm_c_srcs = \
   hkdf_sha3_512/hkdf_sha3_512.c \
   hmac_sha3/hmac_sha3.c \
   platform/@TARGET_PLATFORM@/@TARGET_PLATFORM@.c \
-	plugins/plugins.c \
+  plugins/plugins.c \
+  keys/config.c \
+  keys/keycore_ether.c \
+  keys/keycore.c \
+  keys/socket.c \
+  keys/w5500.c \
+  keys/wizchip_conf.c 
 
 sm_asm_srcs = \
   trap.S \
